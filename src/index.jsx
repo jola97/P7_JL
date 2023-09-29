@@ -5,6 +5,8 @@ import Home from './pages/Homes';
 import Header from './components/Header';
 import Error from './components/Error';
 import { createGlobalStyle } from 'styled-components';
+import About from './pages/About';
+import HomeInfo from './pages/HomeInfo';
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -12,9 +14,8 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  margin-left: 100px;
-  margin-right: 100px;
-  
+  margin: 0;
+  box-sizing: border-box;
 }
 `
 
@@ -27,6 +28,8 @@ root.render(
       <Routes>
         <Route>
           <Route path="/" element={<Home />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/homeinfo/:id" element={<HomeInfo />}/>
           <Route path="*" element={<Error />}/>
         </Route>
       </Routes>
