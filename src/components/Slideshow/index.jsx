@@ -1,6 +1,4 @@
 import styled from "styled-components"
-import logements from "../../datas/logements.json"
-import { useParams } from "react-router-dom";
 import { useState } from "react";
 import vectorLeft from"../../assets/vectorLeft.png"
 import vectorRight from"../../assets/vectorRight.png"
@@ -55,11 +53,7 @@ const Indicator = styled.span`
 `
 
 
-export default function Slideshow({ pictures }){
-
-    const { id } = useParams()
-    const imgHousing = logements.find((element)=> element.id === id)
-    console.log(imgHousing.pictures);
+export default function Slideshow({ pictures, index }){
     const [slide, setSlide] = useState(0)
 
     const nextSlide = () => {
@@ -72,16 +66,22 @@ export default function Slideshow({ pictures }){
 
     return(
         <div>
-            
+           { 
+           pictures.length === 1 ? (   
         <SlideshowContainer>
-            <ArrowSlideshowLeft src={vectorLeft} alt=" précédent" onClick={prevSlide}/>
-            <SlideshowImg src={pictures[slide]}/>
-            <Indicator>
-            {(slide + 1)+ "/"+ pictures.length}
-            </Indicator>      
-            <ArrowSlideshowRight src={vectorRight} alt=" suivant" onClick={nextSlide}/>
+            <SlideshowImg src={pictures[slide]} alt="photo du logement" />    
         </SlideshowContainer> 
-            
+           ) : (
+        <SlideshowContainer>
+           <ArrowSlideshowLeft src={vectorLeft} alt=" précédent" onClick={prevSlide}/>
+           <SlideshowImg src={pictures[slide]} />
+           <Indicator>
+           {(slide + 1)+ "/"+ pictures.length}
+           </Indicator>      
+           <ArrowSlideshowRight src={vectorRight} alt=" suivant" onClick={nextSlide}/>     
+       </SlideshowContainer> 
+                ) 
+            }
         </div>
     )  
 }

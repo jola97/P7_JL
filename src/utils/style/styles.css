@@ -1,0 +1,74 @@
+.main {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.containerTitleLocationNamePic {
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerNamePic {
+    display: flex;
+    align-items: center;
+}
+
+.containerName {
+    display: flex;
+    align-items: center;
+    width: 93px;
+    height: 52px;
+    text-align: right;
+}
+
+.containerTagRating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerTag {
+    display: flex;
+
+}
+
+.starContainer {
+    margin-right: 10px;
+}
+
+
+.containerCollapse {
+    height: 249px;
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.collapseContent {
+    background-color: #F6F6F6;
+    color: #FF6060;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 30px 18px 18px 18px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    top: -37px;
+    z-index: -8;
+    line-height: 25.67px;
+}
+
+.containerDescription {
+    font-size: 18px;
+    margin-top: 0;
+    height: 205px;
+    border: 1px solid;
+}
+
+.liContainerEquipement {
+    list-style-type: none;
+    font-size: 18px;
+    margin-top: none;
+    height: 73px;
+    border: 1px solid;
+}
