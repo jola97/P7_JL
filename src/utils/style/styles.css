@@ -1,179 +1,174 @@
 .main {
-    margin-left: 100px;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: column;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (width <= 480px) {
-    .main{
-        margin: 20px 72px 0px 72px;
-        
-    }
+  .main {
+    margin: 20px 72px 0px 72px;
+  }
 }
 
 .containerTitleLocationNamePicStar {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 @media (width <= 480px) {
-    .containerTitleLocationNamePicStar{
+  .containerTitleLocationNamePicStar {
     margin: 0;
     flex-direction: column;
-        
-    }
+  }
 }
 
 @media (width <= 480px) {
-    .containerTitleLocation{
-        display: flex;
-        flex-direction: column;
-        font-weight: 500;
-        align-items: flex-start;
-    }
-}    
-
-.containerNamePicStar {
+  .containerTitleLocation {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    position: relative;
-    top: 35px;
+    font-weight: 500;
+    align-items: flex-start;
+  }
+}
+
+.containerNamePicStar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  top: 35px;
 }
 
 @media (width <= 480px) {
-    .containerNamePicStar{
-        width: 100%;
-        height: 33px;
-        flex-direction: row-reverse;
-        bottom: -60px;
-        top: 40px;
-    }
+  .containerNamePicStar {
+    width: 100%;
+    height: 33px;
+    flex-direction: row-reverse;
+    bottom: -60px;
+    top: 40px;
+  }
 }
 
 .containerNamePic {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    width: 134px;
-    height: 52px;
-    text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 134px;
+  height: 52px;
+  text-align: right;
 }
 
 @media (width <= 480px) {
-    .containerNamePic{
-        width: 93px;
-        height: 33px;
-        justify-content: end;
-    }
+  .containerNamePic {
+    width: 93px;
+    height: 33px;
+    justify-content: end;
+  }
 }
 
 .containerTag {
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 100px;
-    margin-right: 100px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 100px;
+  margin-right: 100px;
+  flex-wrap: wrap;
 }
 
 @media (width <= 480px) {
-    .containerTag{
-        flex-direction: row;
-        margin: 0;
-        margin-top: -56px;
-        
-    }
+  .containerTag {
+    flex-direction: row;
+    margin: 0;
+    margin-top: -56px;
+  }
 }
 
-.starBlock{
-    display: flex;
+.starBlock {
+  display: flex;
 }
 
 .starContainer {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .containerCollapse {
-    width: 45%;
+  width: 45%;
 }
 
 @media (width <= 480px) {
-    .containerCollapse{
-        flex-direction: column;
-        width: 335px;
-        margin: 0;
-        justify-content: flex-start;
-    }
+  .containerCollapse {
+    flex-direction: column;
+    width: 335px;
+    margin: 0;
+    justify-content: flex-start;
+  }
 }
 
 .collapseContent {
-    background-color: #F6F6F6;
-    color: #FF6060;
-    font-weight: 400;
-    font-size: 24px;
-    padding: 30px 18px 18px 18px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    position: relative;
-    top: -37px;
-    z-index: -8;
-    line-height: 25.67px;
+  background-color: #f6f6f6;
+  color: #ff6060;
+  font-weight: 400;
+  font-size: 24px;
+  padding: 30px 18px 18px 18px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  top: -37px;
+  z-index: -8;
+  line-height: 25.67px;
 }
 
 @media (width <= 480px) {
-    .collapseContent{
-        font-size: 12px;
-        line-height: 17.11px;
-    }
+  .collapseContent {
+    font-size: 12px;
+    line-height: 17.11px;
+  }
 }
 
 .containerDescriptionEquipement {
-    font-size: 18px;
-    margin-top: 0;
-    height: 249px;
-    background-color: #F6F6F6;
-    color: #FF6060; 
-    padding: 40px 20px 20px 20px;
-    list-style-type: none;
-    position: relative;
-    top: -40px;
-    z-index: -1;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+  font-size: 18px;
+  margin-top: 0;
+  height: 249px;
+  background-color: #f6f6f6;
+  color: #ff6060;
+  padding: 40px 20px 20px 20px;
+  list-style-type: none;
+  position: relative;
+  top: -40px;
+  z-index: -1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 @media (width <= 480px) {
-    .containerDescriptionEquipement{
+  .containerDescriptionEquipement {
     width: unset;
     height: 143.32px;
-    font-size: 12px}
+    font-size: 12px;
+  }
 }
 
-.arrowContainter{
-    display: flex;
-    justify-content: center;
+.arrowContainter {
+  display: flex;
+  justify-content: center;
 }
 
 @media (width <= 480px) {
-    .arrowContainter{
-        width: 18.46px;
-        height: 18.42px;
-    }
-    .sizeStar{
-        width: 13.81px;
-        height: 7.91px;
-        margin-top: 4.62px;
-    }
-
+  .arrowContainter {
+    width: 18.46px;
+    height: 18.42px;
+  }
+  .sizeStar {
+    width: 13.81px;
+    height: 7.91px;
+    margin-top: 4.62px;
+  }
 }
 
- .containerImg{
-    width: 100%;
-    position: relative;
-}  
-
-
+.containerImg {
+  width: 100%;
+  position: relative;
+}

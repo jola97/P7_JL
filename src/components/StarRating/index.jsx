@@ -14,12 +14,13 @@ height: 24px;
 `
 
 export default function StarRating({ dataRating }){
+
+    // Variables affichant un tableau de 5 étoiles grises et en couleur
     const fullStars = Array(5).fill(starActive)
     const emptyStars = Array(5).fill(starInActive)
 
     let rating = dataRating
 
-   
     return (
             <div className="starBlock">
                 {

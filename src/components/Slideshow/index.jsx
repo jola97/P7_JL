@@ -79,12 +79,15 @@ const Indicator = styled.span`
 
 
 export default function Slideshow({ pictures, index }){
+    // Variable d'état pour gérer les images du caroussel
     const [slide, setSlide] = useState(0)
 
+    // Variable pour gérer l'image suivante
     const nextSlide = () => {
         setSlide(slide === pictures.length -1 ? 0 : slide + 1)  
     }
 
+    // Variable pour gérer l'image pécédente
     const prevSlide = () => {
         setSlide(slide === 0 ? pictures.length - 1 : slide - 1)
     }

@@ -1,14 +1,14 @@
-import logements from "../../datas/logements.json";
-import Slideshow from "../../components/Slideshow";
-import { useParams, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import styled from "styled-components";
-import colors from "../../utils/style/colors";
-import Tag from "../../components/Tag";
-import StarRating from "../../components/StarRating";
-import Collapse from "../../components/Collapse";
-import Footer from "../../components/Footer";
-import "../../utils/style/styles.css";
+import logements from '../../datas/logements.json'
+import Slideshow from '../../components/Slideshow'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import styled from 'styled-components'
+import colors from '../../utils/style/colors'
+import Tag from '../../components/Tag'
+import StarRating from '../../components/StarRating'
+import Collapse from '../../components/Collapse'
+import Footer from '../../components/Footer'
+import '../../utils/style/styles.css'
 
 const TitleHousing = styled.h1`
   font-weight: 500;
@@ -23,7 +23,7 @@ const TitleHousing = styled.h1`
     line-height: 25.67px;
     margin-top: 0;
   }
-`;
+`
 
 const LocationHousing = styled.p`
   font-weight: 500;
@@ -36,7 +36,7 @@ const LocationHousing = styled.p`
     font-size: 14px;
     line-height: 19.96px;
   }
-`;
+`
 
 const NameHousing = styled.p`
   font-weight: 500;
@@ -49,7 +49,7 @@ const NameHousing = styled.p`
     font-size: 12px;
     line-height: 17.11px;
   }
-`;
+`
 
 const PictureOwnerHousing = styled.img`
   width: 64px;
@@ -61,7 +61,7 @@ const PictureOwnerHousing = styled.img`
     width: 32px;
     height: 32px;
   }
-`;
+`
 
 const CollapseWrapper = styled.div`
   margin-left: 100px;
@@ -70,11 +70,11 @@ const CollapseWrapper = styled.div`
   @media (width <= 480px) {
     margin: 80px 0 0 0;
   }
-`;
+`
 
 const CollapseAccordion = styled.div`
   width: 100%;
-`;
+`
 
 const CollapseItem = styled.div`
   margin-top: 40px;
@@ -88,7 +88,7 @@ const CollapseItem = styled.div`
     flex-direction: column;
     height: unset;
   }
-`;
+`
 
 const StarRatingContainer = styled.div`
   width: 196px;
@@ -99,21 +99,21 @@ const StarRatingContainer = styled.div`
   @media (width <= 480px) {
     justify-content: unset;
   }
-`;
+`
 
 export default function HomeInfo() {
-  const navigate = useNavigate();
-  const { id } = useParams();
-  const housing = logements.find((element) => element.id === id);
+  const navigate = useNavigate()
+  const { id } = useParams()
+  const housing = logements.find((element) => element.id === id)
 
   useEffect(() => {
     if (!housing) {
-      navigate("/error");
+      navigate('/error')
     }
-  }, [housing, navigate]);
+  }, [housing, navigate])
 
   if (!housing) {
-    return null;
+    return null
   }
 
   const {
@@ -125,7 +125,7 @@ export default function HomeInfo() {
     location,
     equipments,
     tags,
-  } = housing;
+  } = housing
 
   return (
     <div>
@@ -160,8 +160,6 @@ export default function HomeInfo() {
           ))}
         </div>
 
-        
-
         <CollapseWrapper>
           <CollapseAccordion>
             <CollapseItem>
@@ -193,5 +191,5 @@ export default function HomeInfo() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }

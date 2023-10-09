@@ -1,17 +1,17 @@
-import styled from "styled-components"
-import "../../utils/style/styles.css"
+import styled from 'styled-components'
+import '../../utils/style/styles.css'
 
 const BannerImg = styled.img`
+  width: 100%;
+  height: 223px;
+  object-fit: cover;
+  border-radius: 25px;
+  filter: brightness(70%);
+
+  @media (width <= 480px) {
     width: 100%;
-    height: 223px;
-    object-fit: cover;
-    border-radius: 25px;
-    filter: brightness(70%); 
-    
-    @media (width <= 480px) {
-      width: 100%;
-      height: 111px;
-    }
+    height: 111px;
+  }
 `
 
 const TitleBanner = styled.h1`
@@ -33,17 +33,13 @@ const TitleBanner = styled.h1`
     }
 `
 
-export default function Banner({ backgroundImage, title }){
-console.log("BannerImg",BannerImg.componentStyle);
+export default function Banner({ backgroundImage, title }) {
+  console.log('BannerImg', BannerImg.componentStyle)
 
-    return (
-            <div className="containerImg">
-                
-                    <BannerImg 
-                    src={backgroundImage}
-                    alt="image" />
-                    <TitleBanner>{title}</TitleBanner>
-            
-            </div>
-        )
+  return (
+    <div className="containerImg">
+      <BannerImg src={backgroundImage} alt="image" />
+      <TitleBanner>{title}</TitleBanner>
+    </div>
+  )
 }

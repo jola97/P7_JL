@@ -28,8 +28,10 @@ const CollapseTitleButton = styled.div`
 `;
 
 export default function Collapse({ title, content }) {
+  // Déclaration d'une variable d'état
   const [show, setShow] = useState(false);
 
+  // Déclaration de variables pour gerer les flèches
 const vectorU = <img src={vectorUp} alt="flèche haut" className="sizeStar"/>
 const vectorD = <img src={vectorDown} alt="flèche bas"/>
 

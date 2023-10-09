@@ -11,7 +11,7 @@ export const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-  @media(width <= 480px){
+  @media (width <= 480px) {
     font-size: 12px;
     margin-left: 10px;
     padding: 0;
