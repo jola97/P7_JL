@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Homes';
 import Header from './components/Header';
-import Error from './components/Error';
+import Error from './pages/Error';
 import { createGlobalStyle } from 'styled-components';
 import About from './pages/About';
 import HomeInfo from './pages/HomeInfo';
@@ -19,6 +19,8 @@ body {
   box-sizing: border-box;
 }
 `
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -6,6 +6,11 @@ import { StyledLink } from "../../utils/style/Atoms"
 const HomeLogo = styled.img`
     width: 210.32px;    
     height: 68px;
+    
+    @media(width <= 480px){
+        width: 145px;    
+        height: 47px;
+    }
 `
 
 const NavContainer = styled.nav`
@@ -13,8 +18,13 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+    @media(width <= 480px){
+        margin: 20px 72px 0 72px;
+    }
+}
 `
 
 export default function Header(){
@@ -23,7 +33,7 @@ export default function Header(){
         <Link to="/">
         <HomeLogo src={logo} alt="logo kasa"/>
         </Link>
-        <nav>
+        <nav className="navLinkContainer">
         <StyledLink to="/">Accueil</StyledLink>
         <StyledLink to="/about">A propos</StyledLink>
         </nav>

@@ -13,6 +13,14 @@ export const CardContainer = styled.div`
   gap: 50px;
   margin-left: 100px;
   margin-right: 100px;
+  
+  @media (width <= 480px) {
+    background-color: unset; 
+    margin-top: 0; 
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+  }
 `
 
 const CardWrapper = styled.div`
@@ -22,6 +30,11 @@ const CardWrapper = styled.div`
     width: 350px;
     height: 350px;
     position: relative;
+    
+    @media (width <= 480px) {
+      width: 335px;
+      height: 255px;  
+    }
 `
 const CardImage = styled.img`
   height: 350px;
@@ -29,7 +42,11 @@ const CardImage = styled.img`
   object-fit: cover;
   align-self: center;
   border-radius: 10px;
-    
+  
+  @media (width <= 480px) {
+    width: 335px;
+    height: 255px;  
+  }  
 `
 const CardBackgroundGradient = styled.img`
   height: 350px;
@@ -37,8 +54,12 @@ const CardBackgroundGradient = styled.img`
   border-radius: 10px;
   position: absolute;
   opacity: 0.4;
-  background: linear-gradient(#FFFFFF 0%
-  , #000000 50%)
+  background: linear-gradient(#FFFFFF, #000000);
+  
+  @media (width <= 480px) {
+    width: 335px;
+    height: 255px;  
+  }
 `
 
 const CardLabel = styled.span`

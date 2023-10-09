@@ -13,32 +13,53 @@ const SlideshowContainer = styled.div`
     align-items: center;
     height: 415px;
     position: relative;
+    
+    @media (width <= 480px) {
+        width: 335px;
+        height: 255px;
+        margin: 0 0 10px 0;
+}
 `
 const SlideshowImg = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 25px;
     object-fit: cover;
+    
+    @media (width <= 480px) {
+        width: 100%;
+        height: 100%;
+}
 `
 
 const ArrowSlideshowLeft = styled.img`
     width: 46.68px;
     height:79.2px;
-    //top: 8.4px;
     margin-left:25.96px; 
     position: absolute;
     left: 23px;
     cursor: pointer;
+    
+    @media (width <= 480px) {
+        width: 11.67px;
+        height: 19.8px;
+        left: -17.51px;
+}
 `
 
 const ArrowSlideshowRight = styled.img`
     width: 46.68px;
     height:79.2px;
-    //top: 8.4px;
     margin-right:25.96px; 
     position: absolute;
     right: 23px;
     cursor: pointer;
+    
+    @media (width <= 480px) {
+        width: 11.67px;
+        height: 19.8px;
+        right: -17.51px;
+}
 `
 
 const Indicator = styled.span`
@@ -50,6 +71,10 @@ const Indicator = styled.span`
     width: 24px;
     height: 32.4px;
     font-weight: 500;
+    
+    @media (width <= 480px) {
+        display:none;
+}
 `
 
 

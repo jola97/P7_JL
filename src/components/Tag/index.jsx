@@ -9,6 +9,11 @@ border-radius: 10px;
 margin-top: 20px;
 text-align: center;
 margin-right: 10px;
+
+@media (width <= 480px) {
+    width: 84px;
+    height: 18px;
+}
 ` 
 
 const TagHousing = styled.div`
@@ -18,6 +23,11 @@ text-align: center;
 font-size: 14px;
 line-height: 19.96px;
 height: 20px;
+
+@media (width <= 480px) {
+    font-size: 10px;
+    line-height: 12.26px;
+}
 ` 
 
 export default function Tag({ tag }){

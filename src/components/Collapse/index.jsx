@@ -20,19 +20,28 @@ const CollapseTitleButton = styled.div`
   justify-content: space-between;
   cursor: pointer;
   margin-bottom: 30px;
+    
+  @media (width <= 480px ) {
+        font-size: 13px;
+        height: 30px;
+}
 `;
 
 export default function Collapse({ title, content }) {
   const [show, setShow] = useState(false);
 
+const vectorU = <img src={vectorUp} alt="flèche haut" className="sizeStar"/>
+const vectorD = <img src={vectorDown} alt="flèche bas"/>
+
+
   return (
     <div>
       <CollapseTitleButton onClick={() => setShow(!show)}>
         {title}
-        <img src={show ? vectorUp : vectorDown} alt="flèche" />
+        <div className="arrowContainter">{show ? vectorU : vectorD}</div>
       </CollapseTitleButton>
 
-      {show ? <p>{content}</p> : null}
+      {show ? <div>{content}</div> : null}
     </div>
-  );
+  )
 }

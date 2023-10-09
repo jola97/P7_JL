@@ -17,6 +17,12 @@ const TitleHousing = styled.h1`
   color: ${colors.primary};
   margin-top: 30px;
   margin-bottom: 0;
+
+  @media (width <= 480px) {
+    font-size: 18px;
+    line-height: 25.67px;
+    margin-top: 0;
+  }
 `;
 
 const LocationHousing = styled.p`
@@ -25,42 +31,74 @@ const LocationHousing = styled.p`
   line-height: 25.67px;
   color: ${colors.primary};
   margin-top: 0;
+
+  @media (width <= 480px) {
+    font-size: 14px;
+    line-height: 19.96px;
+  }
 `;
+
 const NameHousing = styled.p`
   font-weight: 500;
   font-size: 18px;
   line-height: 25.67px;
   color: ${colors.primary};
   margin-right: 10px;
+
+  @media (width <= 480px) {
+    font-size: 12px;
+    line-height: 17.11px;
+  }
 `;
-const PictureHousing = styled.img`
+
+const PictureOwnerHousing = styled.img`
   width: 64px;
   height: 64px;
   line-height: 25.67px;
   border-radius: 50%;
+
+  @media (width <= 480px) {
+    width: 32px;
+    height: 32px;
+  }
 `;
 
 const CollapseWrapper = styled.div`
-  //display: flex;
-  //width: 100vw;
+  margin-left: 100px;
+  margin-right: 100px;
+
+  @media (width <= 480px) {
+    margin: 80px 0 0 0;
+  }
 `;
 
 const CollapseAccordion = styled.div`
-  width: 1000px;
+  width: 100%;
 `;
 
 const CollapseItem = styled.div`
   margin-top: 40px;
-  height: 24px;
+  height: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (width <= 480px) {
+    margin: 0;
+    flex-direction: column;
+    height: unset;
+  }
 `;
 
 const StarRatingContainer = styled.div`
   width: 196px;
-  height: 36px;
-  line-height: 25.67px;
   margin-top: 20px;
   display: flex;
   justify-content: flex-end;
+
+  @media (width <= 480px) {
+    justify-content: unset;
+  }
 `;
 
 export default function HomeInfo() {
@@ -91,61 +129,68 @@ export default function HomeInfo() {
 
   return (
     <div>
-      <Slideshow pictures={pictures} />
       <div className="main">
-        <div className="containerTitleLocationNamePic">
+        <Slideshow pictures={pictures} />
+
+        <div className="containerTitleLocationNamePicStar">
           <div className="containerTitleLocation">
             <TitleHousing>{title}</TitleHousing>
             <LocationHousing>{location}</LocationHousing>
           </div>
-          <div className="containerNamePic">
-            <div className="containerName">
-              <NameHousing>{name}</NameHousing>
-            </div>
-            <PictureHousing src={picture} />
-          </div>
-        </div>
-        <div className="containerTagRating">
-          <div className="containerTag">
-            {tags.map((tag, index) => (
-              <Tag key={index} tag={tag} />
-            ))}
-          </div>
+
           <div>
-            <StarRatingContainer>
-              <StarRating dataRating={rating} />
-            </StarRatingContainer>
+            <div className="containerNamePicStar">
+              <div className="containerNamePic">
+                <NameHousing>{name}</NameHousing>
+                <PictureOwnerHousing
+                  src={picture}
+                  alt="photo du propriétaire de l'appartement"
+                />
+              </div>
+              <StarRatingContainer>
+                <StarRating dataRating={rating} />
+              </StarRatingContainer>
+            </div>
           </div>
         </div>
 
-        <div className="containerCollapse">
-          <CollapseWrapper>
-            <CollapseAccordion>
-              <CollapseItem>
+        <div className="containerTag">
+          {tags.map((tag, index) => (
+            <Tag key={index} tag={tag} />
+          ))}
+        </div>
+
+        
+
+        <CollapseWrapper>
+          <CollapseAccordion>
+            <CollapseItem>
+              <div className="containerCollapse">
                 <Collapse
                   title="Description"
                   content={
-                    <p className="containerDescription">{description}</p>
+                    <div className="containerDescriptionEquipement">
+                      {description}
+                    </div>
                   }
-                ></Collapse>
-              </CollapseItem>
-            </CollapseAccordion>
-          </CollapseWrapper>
-          <CollapseWrapper>
-            <CollapseAccordion>
-              <CollapseItem>
+                />
+              </div>
+              <div className="containerCollapse">
                 <Collapse
                   title="Équipements"
-                  content={equipments.map((element) => (
-                    <li className="liContainerEquipement">{element}</li>
-                  ))}
-                ></Collapse>
-              </CollapseItem>
-            </CollapseAccordion>
-          </CollapseWrapper>
-        </div>
+                  content={
+                    <div className="containerDescriptionEquipement">
+                      {equipments.map((element, index) => (
+                        <li key={index}>{element}</li>
+                      ))}
+                    </div>
+                  }
+                />
+              </div>
+            </CollapseItem>
+          </CollapseAccordion>
+        </CollapseWrapper>
       </div>
-
       <Footer />
     </div>
   );
