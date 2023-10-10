@@ -25,7 +25,7 @@ const TitleBanner = styled.h1`
     
     @media (width <= 480px) {
       font-size:24px;
-      width: 203px;
+      width: 216px;
       text-align: left;
       left: 26px;
       top: 12px;
@@ -34,7 +34,6 @@ const TitleBanner = styled.h1`
 `
 
 export default function Banner({ backgroundImage, title }) {
-  console.log('BannerImg', BannerImg.componentStyle)
 
   return (
     <div className="containerImg">

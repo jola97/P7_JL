@@ -15,7 +15,7 @@ flex-direction: column;
 align-items: center; 
 margin-top: 50px;
 position: absolute;
-margin-top: 30vh;
+margin-top: 20%;
 
 @media (width <= 480px) {
     position: relative;

@@ -10,7 +10,7 @@ import HomeInfo from './pages/HomeInfo'
 
 const GlobalStyle = createGlobalStyle`
 * {
-  font-family: Montserrat,'Trebuchet MS', Helvetica, sans-serif;
+  font-family: 'Montserrat','Trebuchet MS', Helvetica, sans-serif;
 }
 
 body {
